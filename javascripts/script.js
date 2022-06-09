@@ -227,3 +227,7 @@ socket.on('paddleMove', (paddleData) => {
 socket.on('ballMove', (ballData) => {
   ;({ ballX, ballY, score } = ballData)
 })
+
+socket.on('disconnect', () => (reason) => {
+  console.log(`Clint ${socket.id} disconnected: ${reason}`)
+})
